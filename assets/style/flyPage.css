@@ -1,0 +1,44 @@
+body{background: rgb(226 232 240); overflow: unset;}
+
+
+/***********************/
+/*     MENU STYLES     */
+header{z-index: 2; position: fixed; top: 0; width: 100%;}
+#menuItems > li{cursor: pointer;}
+
+#account{border: none; padding: 30px; width: 250px; box-shadow: 0 0 10px rgba(0, 0, 0, .3); border-radius: 20px;}
+#account button{border: none; background: rgb(59 130 246); padding: 10px; color: white;}
+#register:hover{background-color: rgb(26, 63, 123); transition: .2s;}
+#login:hover{background-color: rgb(26, 63, 123); transition: .2s;}
+/*     MENU STYLES     */
+/***********************/
+
+
+#formFlySchedule{margin-top: 100px;}
+.floating-header-hero{top: 150px; left: 20.5%; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; border-radius: 20px; padding: 15px; z-index: 1;}
+
+#flySection{display: flex; flex-direction: row; flex-wrap: wrap; justify-content: space-between;}
+#flyCard{
+    /* width: 100%; */
+    max-width: 49%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;}
+#flyCardDiv{width: 100%; display: flex; align-items: center; flex-wrap: wrap; justify-content: center; box-shadow: 0 0 10px rgba(0, 0, 0, .1);}
+#flyCardDiv:hover{box-shadow: 0 0 30px rgba(0, 0, 0, .3); transition: .3s;}
+
+
+.w-44{margin: 10px 0 10px 0; text-align: center; color: white;}
+
+
+
+/*     RESPONSIVE     */
+
+@media screen and (max-width: 767px) {
+
+
+    #flySection{justify-content: center;}
+    #flyCard{max-width: none;}
+    #flyCard .imgPlane{display: none;}
+
+}

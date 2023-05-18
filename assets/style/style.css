@@ -1,0 +1,67 @@
+body{background: rgb(226 232 240); overflow: hidden;}
+
+.hero {
+    background: url('../img/menorca.jpg') no-repeat;
+    height: 700px;
+    margin-top: 150px;
+    border-radius: 15px;
+    background-size: cover;
+    position: relative;
+    right: -20px;
+}
+
+header{z-index: 2; position: fixed; top: 0; width: 100%;}
+#menuItems > li{cursor: pointer;}
+img{max-width: 100%; max-height: 100%;}
+
+button i{width: 20px; height: 20px;}
+button span:last-child{margin-left: 1rem;}
+button#login span:last-child{margin-left: 2rem;}
+
+.floating-sub-hero{height: 200px; border-radius: 30px; bottom: -7%; left: 10%; display: flex; align-items: center;}
+.floating-header-hero{top: -40px; left: 20.5%;}
+
+.text-shadow{text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.25);}
+input.truncate{overflow: hidden; white-space: normal; text-overflow: ellipsis;}
+
+
+#account{
+    border: none;
+    padding: 30px;
+    width: 250px;
+    box-shadow: 0 0 10px rgba(0,0,0, .3);
+    border-radius: 20px;
+}
+#account button{border: none; background: rgb(59 130 246); padding: 10px; color: white;}
+#register:hover{background-color: rgb(26, 63, 123); transition: .2s;}
+#login:hover{background-color: rgb(26, 63, 123); transition: .2s;}
+
+
+/* TESTI E ALTRI ELEMENTI */
+.textino{
+    position: absolute;
+    top: 150px;
+    width: 100%;
+    text-align: center;
+    left: 0;
+    height: 250px;
+    display: flex;
+}
+.fontino{
+    font-size: 50px;
+    font-weight: bold;
+    text-transform: uppercase;
+    position: relative;
+    top: 30px;
+    left: 15%;
+    z-index: 1;
+    color: white;
+    font-weight: bold;
+    filter: drop-shadow(0 0 2px white);
+    align-items: center;
+    display: flex;
+}
+
+.flex.text-white.items-center{display: flex; justify-content: center;}
+.text-sm.text-white.m-0{display: flex; justify-content: center;}
+.indicators{position: absolute; right: 50px;}

@@ -1,0 +1,50 @@
+@media screen and (max-width: 767px) {
+
+    body{background: black;}
+
+    .hero {
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        margin-top: 0;
+        filter: opacity(50%); -webkit-filter: opacity(50%);
+    }
+
+    #formIndex{
+        position: fixed;
+        bottom: 20vh;
+        background-color: #fff;
+        border-radius: 25px;
+        width: 90%;
+        left: 5%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #formIndex > .grid{display: flex; flex-direction: column; padding: 30px; width: 85%;}
+    .indicators{display: none;}
+    .absolute.py-6.px-8.items-center.shadow-xl.bg-white.floating-sub-hero{background-color: transparent;}
+
+
+    .textino{top: 10vh; left: 0; width: 100%; display: flex; justify-content: center;}
+    .fontino{left: 0;}
+
+
+
+    #footer{background-color: #fff;}
+    #footer *{color: black;}
+ 
+    
+
+
+    @media (max-height: 1000px) {
+
+        .fontino{display: none;}
+        #formIndex{bottom: 25%}
+    }
+
+
+    
+}
