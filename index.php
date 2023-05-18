@@ -18,13 +18,12 @@
     <link rel="stylesheet" href="assets/style/responsive.css">
 
     <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,600,700,900&display=swap" rel="stylesheet" />
-    <!--IMPORT CONFIG FILE-->
-    <?php require_once('engine/server/config.php');?>
     <title>Road Trip</title>
 </head>
 
 <body class=" min-h-screen">
-    <?php require_once("assets/components/user/header.php");?>
+    <?php require_once("assets/components/user/header.php");
+    ?>
     <div class="textino">
         <h1 class="fontino">Aggiungi più avventura <br/> alla tua vita</h1>
     </div>

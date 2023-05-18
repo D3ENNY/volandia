@@ -1,5 +1,5 @@
 $(()=>{
-    const path = window.location.origin + "/progetti/login-volandia"
+    const path = window.location.origin + "/progetti/volandia"
     console.log(path);
 
     $('#user').attr('src', path+'/assets/img/icon.jpg');
