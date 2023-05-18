@@ -1,11 +1,4 @@
 <?php
-    // Rimuovi eventuali inclusioni precedenti di Autoloader.php
-    /*foreach (get_included_files() as $filename) {
-        if (strpos($filename, 'Autoloader.php') !== false) {
-            return;
-        }
-    }
-    include '../Autoloader.php';*/
     class Template{
 
         public function template($page){
@@ -30,12 +23,21 @@
                         require_once($components . 'header.php'),
                         require_once($components . 'aside.php'),
                         require_once($included_page),
-                        require_once($components . 'footer.php'),
+                        require_once($components . 'footer.php')
                     ];
                 }else{
                     $output = [
                         require_once($error404)
                     ];
+
+                    if($page == 'default'){
+                        $output = [
+                            require_once($components . 'head.php'),
+                            require_once($components . 'header.php'),
+                            require_once($components . 'aside.php'),
+                            require_once($components . 'footer.php')
+                        ];
+                    }
                 }
 
             }catch(Exception $e){
