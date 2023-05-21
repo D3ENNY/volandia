@@ -59,8 +59,9 @@ if (isset($_COOKIE['requestFly']))
                         echo '<div class="grid grid-cols-1">';
                         require('../assets/components/user/errorCard.php');
                         echo '</div>';
-                        $flag = false;
                     }
+                    $flag = false;
+
 
                     require('../assets/components/user/separatorDate.php');
 

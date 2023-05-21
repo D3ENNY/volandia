@@ -11,6 +11,8 @@
     <script src="https://unpkg.com/feather-icons"></script>
     <!-- JS -->
     <script src="../engine/client/script.js"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="../assets/style/style.css">
     <title>Admin Panel</title>
 </head>
 

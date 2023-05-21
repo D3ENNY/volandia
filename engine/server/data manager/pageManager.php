@@ -14,8 +14,10 @@
         }
 
         public function sendPage($page){
-            setcookie('page', $page, time()+3600, '/');
+            ob_start();
+            $_SESSION['page'] = $page;
             header("Location: ../../../pages/admin.php");
+            ob_end_flush();
         }
     }
 ?>

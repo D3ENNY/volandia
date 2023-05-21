@@ -75,10 +75,9 @@
             //se è stato trovato un utente nel db logga, se non è stato trovato significa che non c'erano utenti con quella mail
             if($result) 
                 if(password_verify($pw, $result[0]['password'])){
-                    session_start();
-                    $_SESSION['username'] = $result[0]['username'];
-                    $_SESSION['userData'] = json_encode($result);
                     ob_start(); //creo l'output buffer
+                    $_SESSION['username'] = $user === 'USERS' ? $result[0]['username'] : "{$result[0]['Nome']} {$result[0]['Cognome']}";
+                    $_SESSION['userData'] = json_encode($result);
                     header("Location: {$file}");
                     ob_end_flush(); //invio la chiamata al browser e cancello il buffer
                     exit();

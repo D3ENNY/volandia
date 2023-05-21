@@ -1,12 +1,19 @@
 <?php
+    // Rimuovi eventuali inclusioni precedenti di Autoloader.php
+    foreach (get_included_files() as $filename) {
+        if (strpos($filename, 'Autoloader.php') !== false) {
+            return;
+        }
+    }
+    include '../Autoloader.php';
+
     class Template{
 
-        public function template($page){
-            define('ABSPATH', $_SERVER["DOCUMENT_ROOT"] . '/progetti/volandia/');
-            define('PAGES', ABSPATH . 'pages/');
-            define('COMPONENTS', ABSPATH . 'assets/components/');
-            define('ERROR', PAGES . 'error/');
+        public function __construct(){
+            new Config();
+        }
 
+        public function template($page){
             try{
                 $extension = '.php';
                 $default = "index";

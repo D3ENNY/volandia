@@ -72,13 +72,13 @@
         }
 
         public function sendFly($avaibleFly, $data){
+            ob_start(); //creo l'output buffer
             if($avaibleFly){
                 $resultJson = $this ->formatJson($avaibleFly);
                 setcookie('avaibleFly', $resultJson, time()+3600, '/');
             }
             $resultJson = json_encode(array("departure" => $data['departure'], "destination" => $data['destination'], "departureDate" => $data['departureDate'], "returnDate" => $data['returnDate']));
             setcookie('requestFly', $resultJson, time()+3600, '/');
-            ob_start(); //creo l'output buffer
             header("Location: ../../pages/fly.php");
             ob_end_flush(); //invio la chiamata al browser e cancello il buffer
         }

@@ -8,7 +8,8 @@
             <p class="text-xs text-center mx-auto">Orario Partenza:</p>
             <?php echo date("H:i", strtotime($fly['DataPartenza']));?>
         </div>
-        <div class="flex items-center imgPlane">
+
+        <div class="flex items-center imgPlane mix-blend-multiply">
             <object data="../assets/img/airplane.svg" width="100%" height="40" viewBox="0 0 100 90" preserveAspectRatio="none"></object>
         </div>
         <div class="border-r-2 border-gray-600 flex items-center flex-col justify-center">

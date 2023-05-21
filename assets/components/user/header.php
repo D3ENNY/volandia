@@ -6,7 +6,9 @@
 <header class="bg-slate-100 border border-b-4 border-slate-400">
     <div class="w-4/5 mx-auto py-6 flex justify-between items-center ">
         <div>
-            <h1 class="text-2xl text-gray-800 font-bold" style="min-width: max-content; margin-left: -25px;"><a href="http://localhost/login-volandia/index.php">Road Trip</a></h1>
+            <h1 class="text-2xl text-gray-800 font-bold" style="min-width: max-content; margin-left: -25px;">
+                <a id="home">Road Trip</a>
+            </h1>
         </div>
         <!-- menu -->
         <div>

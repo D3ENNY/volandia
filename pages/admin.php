@@ -9,9 +9,9 @@
         require_once('../engine/server/page_manager/fileSwapper.php');
 
         $template = new Template();
-        if(isset($_COOKIE['page'])){
-                $template->template($_COOKIE['page']);
-                setcookie('page', '', time() - 3600, '/');
+        if(isset($_SESSION['page'])){
+                $template->template($_SESSION['page']);
+                $_SESSION['page'] = null;
         }else{
                 $template->template("default");
         }

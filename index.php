@@ -22,8 +22,7 @@
 </head>
 
 <body class=" min-h-screen">
-    <?php require_once("assets/components/user/header.php");
-    ?>
+    <?php require_once("assets/components/user/header.php");?>
     <div class="textino">
         <h1 class="fontino">Aggiungi più avventura <br/> alla tua vita</h1>
     </div>
