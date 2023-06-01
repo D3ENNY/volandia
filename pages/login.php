@@ -9,7 +9,7 @@
     <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js"></script>
     <script src="https://unpkg.com/validator@latest/validator.min.js"></script>
     <!--FILE JS-->
-    <script src="../engine/client/validation.js"></script>
+    <script src="../engine/client/validationLogin.js"></script>
     <title>Login - Road Trip</title>
 </head>
 <body>

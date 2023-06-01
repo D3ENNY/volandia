@@ -12,7 +12,7 @@
     <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js"></script>
     <!--FILE JS-->
     <script src="engine/client/script.js" defer></script>
-    <script src="engine/client/validation.js"></script>
+    <script src="engine/client/validationHome.js"></script>
     <!--STYLE-->
     <link rel="stylesheet" href="assets/style/style.css">
     <link rel="stylesheet" href="assets/style/responsive.css">

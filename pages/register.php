@@ -9,7 +9,7 @@
     <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js"></script>
     <script src="https://unpkg.com/validator@latest/validator.min.js"></script>
     <!--FILE JS-->
-    <script src="../engine/client/validation.js"></script>
+    <script src="../engine/client/validationRegister.js"></script>
     <title>Login - Road Trip</title>
 </head>
 <body>
@@ -23,7 +23,7 @@
                     </div>
                     <div class="grid grid-cols-1 gap-5 mt-5">
                     <label class="font-bold text-gray-700 my-4" for="mail"> username:
-                            <input class="w-full bg-gray-100 border border-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline" placeholder="MarioRossi84" type="text" name="username" id="" required>
+                            <input class="w-full bg-gray-100 border border-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline" placeholder="MarioRossi84" type="text" name="username" id="username" required>
                         </label>
                         <label class="font-bold text-gray-700 my-4" for="mail"> email:
                             <input class="w-full bg-gray-100 border border-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline" placeholder="email@example.com"type="email" name="email" id="email" required>
