@@ -14,7 +14,7 @@
                 $template->template($_SESSION['page']);
                 $_SESSION['page'] = null;
         }else{
-                $template->template("default");
+                $template->template("addFly");
         }
-        
+
 ?>
