@@ -9,6 +9,10 @@
 
     class PageManager{
 
+        public function __construct(){
+            session_start();
+        }
+
         public function getPage($get){
             return array_keys($get)[0];
         }

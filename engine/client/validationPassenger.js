@@ -1,4 +1,3 @@
-let validated = []
 let countryList = []
 const settings = {
     "async": true,
@@ -170,42 +169,13 @@ $(()=>{
       
         if (!/[!@#$%^&*(),.?":{}|<>]/.test(input.val())) errors.push("La password deve contenere almeno un carattere speciale")
     
-        if(!errors.length == 0) input.setError()
+        if(errors.length != 0) input.setError()
         else input.setSuccess()
 
         if(input.val() === "") input.setDefault()
     })
-/*
-    $("#login").click((event) =>{
-        let input = $(event.target)
-        if(validated.length!=2) input.setDisabled()
-        else input.setEnabled()
-    })
-
-    $("#register").click((event) =>{
-        let input = $(event.target)
-        if(validated.length!=11) input.setDisabled()
-        else input.setEnabled()
-    })
-*/
-    $("#departureDate").datepicker({
-        dateFormat: 'dd-mm-yy',
-        changeMonth: true,
-        changeYear: true, 
-        minDate: new Date(), // imposta la data minima a oggi
-    });
-
-    $("#returnDate").datepicker({
-        dateFormat: 'dd-mm-yy',
-        changeMonth: true,
-        changeYear: true, 
-    });
-
-    addPropJson = () =>{
-        $.getJSON()
-    }
-
 })
+
 
 $.fn.setEnabled = function () {
     this.prop("disabled", false)

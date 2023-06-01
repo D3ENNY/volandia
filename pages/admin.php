@@ -1,4 +1,5 @@
 <?php
+        session_start();
         // Rimuovi eventuali inclusioni precedenti di Autoloader.ph
         foreach (get_included_files() as $filename) {
                 if (strpos($filename, 'Autoloader.php') !== false) {
