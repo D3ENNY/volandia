@@ -27,7 +27,7 @@
                     </button>
                 </li>
                 <li>
-                    <button type="submit" name="home" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+                    <button type="button" id="home" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
                         <i class="h-7 w-7 mr-2 text-gray-900 dark:text-white" data-feather="home"></i>
                         Home
                     </button>
