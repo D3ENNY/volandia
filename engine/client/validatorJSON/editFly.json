@@ -1,0 +1,9 @@
+{
+    "floating_number" : null,
+    "floating_origin" : null,
+    "floating_destination" : null,
+    "floating_departure_date" : null,
+    "floating_arrival_date" : null,
+    "floating_capacity" : null,
+    "floating_code" : null
+}

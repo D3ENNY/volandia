@@ -1,3 +1,6 @@
+import { CryptManager } from "./crypt/CryptManager.js"
+const cryptManager = new CryptManager()
+var currentFilePath = window.location.origin + "/progetti/volandia/engine/client/"
 let countryList = []
 const settings = {
     "async": true,
@@ -14,6 +17,10 @@ $.ajax(settings).done(function (response) {
 
 $(()=>{
 
+    $.getJSON(currentFilePath+"validatorJSON/passenger.json", (data) =>{
+        localStorage.setItem("passenger", cryptManager.encrypt(JSON.stringify(data)))
+    })
+
     //validazione codice fiscale
     $("#fc").on("input", (event)=>{
         let regex = new RegExp("^[A-Z]{6}[0-9]{2}[A-Z][0-9]{2}[A-Z][0-9]{3}[A-Z]{1}$|([0-9]{11})$") //validazione codice fiscale
@@ -25,7 +32,7 @@ $(()=>{
         else input.setSuccess()
         
         if(input.val() === "") input.setDefault()
-        
+        checkValidate()
     })
 
     //validazione nome
@@ -44,7 +51,7 @@ $(()=>{
         else input.setSuccess()
 
         if(input.val() === "") input.setDefault()
-
+        checkValidate()
     })
 
     //validazione cognome
@@ -63,7 +70,7 @@ $(()=>{
         else input.setSuccess()
 
         if(input.val() === "") input.setDefault()
-
+        checkValidate()
     })
 
     //validazione data di nascita
@@ -74,7 +81,7 @@ $(()=>{
         if(date[0] < 1907) input.setError()
         else input.setSuccess()
         if(input.val() === "") input.setDefault()
-
+        checkValidate()
     })
 
     //validazione nazionalità
@@ -83,7 +90,7 @@ $(()=>{
         if(!countryList.includes(input.val().toLowerCase())) input.setError()
         else input.setSuccess()
         if(input.val() === "") input.setDefault()
-
+        checkValidate()
     })
 
     //validazione tipo di via
@@ -91,6 +98,7 @@ $(()=>{
         let input = $(event.target)
         if(input.val() === "") input.setDefault()
         else input.setSuccess()
+        checkValidate()
     })
 
     //validazione via
@@ -109,7 +117,7 @@ $(()=>{
         else input.setSuccess()
 
         if(input.val() === "") input.setDefault()
-        
+        checkValidate()
     })
 
     //validazione città
@@ -128,7 +136,7 @@ $(()=>{
         else input.setSuccess()
 
         if(input.val() === "") input.setDefault()
-        
+        checkValidate()
     })
 
     //validazione housenumber
@@ -140,6 +148,7 @@ $(()=>{
         else input.setSuccess()
     
         if(input.val() === "") input.setDefault()
+        checkValidate()
     })
 
     //validazione email
@@ -150,7 +159,7 @@ $(()=>{
         else input.setSuccess()
 
         if(input.val() === "") input.setDefault()
-        
+        checkValidate()
     }) 
 
     //validazione password  TODO
@@ -173,9 +182,24 @@ $(()=>{
         else input.setSuccess()
 
         if(input.val() === "") input.setDefault()
+        checkValidate()
+    })
+
+    $("#register").on("click", (event)=>{
+        if(!$("#register").prop("disabled"))
+            localStorage.removeItem("passenger")
     })
 })
 
+let checkValidate = () =>{
+    let json = JSON.parse(cryptManager.decrypt(localStorage.getItem("passenger")))
+    let flag = true
+    $.each(json, (i, data) =>{
+        if(data != true) flag=false
+    })
+    if(flag) $("#register").setEnabled()
+    else $("#register").setDisabled()
+}
 
 $.fn.setEnabled = function () {
     this.prop("disabled", false)
@@ -188,19 +212,25 @@ $.fn.setDisabled = function () {
 $.fn.setError = function(){
     this.css('background-color', '#ff000040')
     this.css('border', '1px solid #ff0000')
-    validated.remove(this.prop("id"))
+    let json = JSON.parse(cryptManager.decrypt(localStorage.getItem("passenger")))
+    json[this.prop("id")] = false
+    localStorage.setItem("passenger", cryptManager.encrypt(JSON.stringify(json)))
 }
 
 $.fn.setSuccess = function() {
     this.css('background-color','#00ff0040')
     this.css('border', '1px solid #00ff00')
-    validated.push(this.prop("id"))
+    let json = JSON.parse(cryptManager.decrypt(localStorage.getItem("passenger")))
+    json[this.prop("id")] = true
+    localStorage.setItem("passenger", cryptManager.encrypt(JSON.stringify(json)))
 }
 
 $.fn.setDefault = function(){
     this.css('background-color', '#f3f4f6')
     this.css('border', '1px solid #f3f4f6')
-    validated.remove(this.prop("id"))
+    let json = JSON.parse(cryptManager.decrypt(localStorage.getItem("passenger")))
+    json[this.prop("id")] = null
+    localStorage.setItem("passenger", cryptManager.encrypt(JSON.stringify(json)))
 }
 
 Array.prototype.remove = function(value) {

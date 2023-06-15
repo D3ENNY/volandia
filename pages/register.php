@@ -8,8 +8,9 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js"></script>
     <script src="https://unpkg.com/validator@latest/validator.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js"></script>
     <!--FILE JS-->
-    <script src="../engine/client/validationRegister.js"></script>
+    <script type="module" src="../engine/client/validationRegister.js"></script>
     <title>Login - Road Trip</title>
 </head>
 <body>
@@ -33,7 +34,7 @@
                         </label>
                     </div>
                     <div class="grid grid-cols-2 w-full my-2 gap-3 sm:grid-cols-1 md:grid-cols-2 lg:w-1/2">
-                        <input class="uppercase text-sm font-bold tracking-wide bg-blue-900 text-gray-100 p-3 rounded-lg w-full focus:outline-none focus:shadow-outline" type="submit" value="Login" id="login">
+                        <input class="uppercase text-sm font-bold tracking-wide bg-blue-900 text-gray-100 p-3 rounded-lg w-full focus:outline-none focus:shadow-outline" type="submit" value="Register" id="register" disabled>
                         <a class="text-gray-500" href="login.php">hai giù un account? <span class="underline underline-offset-1">Loggati</span></a>
                     </div>
                 </div>  
