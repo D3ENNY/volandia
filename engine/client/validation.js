@@ -175,19 +175,7 @@ $(()=>{
 
         if(input.val() === "") input.setDefault()
     })
-/*
-    $("#login").click((event) =>{
-        let input = $(event.target)
-        if(validated.length!=2) input.setDisabled()
-        else input.setEnabled()
-    })
-
-    $("#register").click((event) =>{
-        let input = $(event.target)
-        if(validated.length!=11) input.setDisabled()
-        else input.setEnabled()
-    })
-*/
+    
     $("#departureDate").datepicker({
         dateFormat: 'dd-mm-yy',
         changeMonth: true,
@@ -200,11 +188,6 @@ $(()=>{
         changeMonth: true,
         changeYear: true, 
     });
-
-    addPropJson = () =>{
-        $.getJSON()
-    }
-
 })
 
 $.fn.setEnabled = function () {

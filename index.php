@@ -7,13 +7,13 @@
     <!--CDN-->
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/feather-icons"></script>
-    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.0/themes/smoothness/jquery-ui.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js"></script>
     <!--FILE JS-->
     <script src="engine/client/script.js" defer></script>
     <script src="engine/client/validationHome.js"></script>
     <!--STYLE-->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.0/themes/smoothness/jquery-ui.css">
     <link rel="stylesheet" href="assets/style/style.css">
     <link rel="stylesheet" href="assets/style/responsive.css">
 
@@ -64,7 +64,7 @@
                     <div>
                         <label for="landing" class="flex flex-col mr-2">
                             Andata:
-                            <input type="text" name="departureDate" placeholder="partenza" class="rounded-full border border-gray-400 px-2 py-1 w-full" onfocus="(this.type='date')" onblur="(this.type='text')" id="departureDate" min="" required>
+                            <input type="text" name="departureDate" placeholder="partenza" class="rounded-full border border-gray-400 px-2 py-1 w-full" onfocus="(this.type='date')" onblur="(this.type='text')" id="departureDate" required>
                         </label>
                     </div>
                     <div>

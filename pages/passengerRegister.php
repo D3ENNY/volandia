@@ -9,8 +9,9 @@
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js"></script>
   <script src="https://unpkg.com/validator@latest/validator.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js"></script>
   <!--FILE JS-->
-  <script src="../engine/client/validation.js"></script>
+  <script type="module" src="../engine/client/validationPassenger.js"></script>
   <title>Register - Road Trip</title>
 </head>
 
@@ -66,7 +67,7 @@
             </label>
             </div>
           <div class="grid grid-cols-2 mt-4 my-2 w-3/4 gap-4">
-            <input class="uppercase text-sm font-bold tracking-wide bg-blue-900 text-gray-100 p-3 rounded-lg w-full focus:outline-none focus:shadow-outline" type="submit" value="Add passenger" id="register">
+            <input class="uppercase text-sm font-bold tracking-wide bg-blue-900 text-gray-100 p-3 rounded-lg w-full focus:outline-none focus:shadow-outline" type="submit" value="Add passenger" id="register" disabled>
             <a class="text-gray-500" href="login.html">hai già un account? <span class="underline underline-offset-1">Loggati</span></a>
           </div>
         </div>

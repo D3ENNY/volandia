@@ -1,0 +1,13 @@
+{
+    "fc" : null,
+    "name" : null,
+    "surname" : null,
+    "date" : null,
+    "nationality" : null,
+    "raute_type" : null,
+    "raute" : null,
+    "city" : null,
+    "number" : null,
+    "email" : null,
+    "password" : null
+}
