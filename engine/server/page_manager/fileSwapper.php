@@ -16,7 +16,7 @@
         public function template($page){
             try{
                 $extension = '.php';
-                $default = "index";
+                $default = "adminHome";
                 $error404 = ERROR . '404' . $extension; 
                 $components = COMPONENTS . 'admin/';
                 $request_page = isset($page) ? $page : $default;
@@ -36,22 +36,12 @@
                     $output = [
                         require_once($error404)
                     ];
-
-                    if($page == 'default'){
-                        $output = [
-                            require_once($components . 'head.php'),
-                            require_once($components . 'header.php'),
-                            require_once($components . 'aside.php'),
-                            require_once($components . 'footer.php')
-                        ];
-                    }
                 }
 
             }catch(Exception $e){
                 var_dump($e);
                 echo "error";
             }
-
             return $output;
         }
     }

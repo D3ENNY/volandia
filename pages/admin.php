@@ -10,11 +10,16 @@
         require_once('../engine/server/page_manager/fileSwapper.php');
 
         $template = new Template();
-        if(isset($_SESSION['page'])){
-                $template->template($_SESSION['page']);
-                $_SESSION['page'] = null;
-        }else{
-                $template->template("addFly");
-        }
+        if(isset($_SESSION['userData'])){
+                $userData = json_decode($_SESSION['userData']);
+                if(strpos($userData[0] -> email, '@roadtrip.it')){
+                        if(isset($_SESSION['page'])){
+                                $template->template($_SESSION['page']);
+                                $_SESSION['page'] = null;
+                        }else{
+                                $template->template("adminHome");
+                        }
+                }else $template->template("404");
+        }else $template->template("404");
 
 ?>
