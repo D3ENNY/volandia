@@ -1,7 +1,7 @@
-<div class="mt-20 space-x-80 mr-10">
+<div class="mt-20">
     <script type="module" src="../engine/client/validationAddFly.js"></script>
     <div>
-        <h1 class="text-white text-4xl text-center mb-4 pl-80">AGGIUNGI VOLO</h1>
+        <h1 class="text-white text-4xl text-center mb-4">AGGIUNGI VOLO</h1>
     </div>
     <form action="../engine/server/addFly.php" method="POST" class="border border-white p-10">
         <div class="relative z-0 w-full mb-6 group">
@@ -18,11 +18,11 @@
         </div>
         <div class="grid md:grid-cols-2 md:gap-6">
             <div class="relative z-0 w-full mb-6 group">
-                <input type="text" name="departureDate" id="floating_departure_date" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required onfocus="(this.type='date')" onblur="(this.type='text')" />
+                <input type="text" name="departureDate" id="floating_departure_date" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required autocomplete="off" />
                 <label for="departureDate" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Data Partenza</label>
             </div>
             <div class="relative z-0 w-full mb-6 group">
-                <input type="text" name="arrivalDate" id="floating_arrival_date" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required onfocus="(this.type='date')" onblur="(this.type='text')" />
+                <input type="text" name="arrivalDate" id="floating_arrival_date" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required autocomplete="off" />
                 <label for="arrivalDate" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Data Arrivo</label>
             </div>
         </div>

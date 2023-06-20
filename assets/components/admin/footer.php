@@ -1,6 +1,8 @@
+</div>
+</div>
 <script>
-        feather.replace()
-    </script>
+    feather.replace()
+</script>
 </body>
 
 </html>

@@ -65,13 +65,10 @@ $(()=>{
             checkValidate()
         })
         
-        //validazione data partenza
-        $("#floating_departure_date").datepicker({
-            dateFormat: 'dd-mm-yy',
-            changeMonth: true,
-            changeYear: true, 
-            minDate: new Date(), // imposta la data minima a oggi
-        }) 
+        $('#floating_departure_date').datetimepicker({
+            format: 'd-m-Y H:i',
+            minDate: 0,
+        })
 
         $("#floating_departure_date").on("blur change", (event) =>{
             let input = $(event.target)
@@ -84,11 +81,9 @@ $(()=>{
         $("#floating_departure_date").css("color-scheme", "dark")  
 
         //validazione data arrivo
-        $("#floating_arrival_date").datepicker({
-            dateFormat: 'dd-mm-yy',
-            changeMonth: true,
-            changeYear: true, 
-            minDate: new Date(), // imposta la data minima a oggi
+        $("#floating_arrival_date").datetimepicker({
+            format: 'd-m-Y H:i',
+            minDate: 0,
         })
 
         $("#floating_arrival_date").on("blur change", (event) =>{

@@ -1,7 +1,7 @@
-<div class="mt-20 space-x-80 mr-10">
+<div class="mt-20">
     <script type="module" src="../engine/client/validationEditUser.js"></script>
     <div>
-        <h1 class="text-white text-4xl text-center mb-4 pl-80">MODIFICA UTENTE</h1>
+        <h1 class="text-white text-4xl text-center mb-4">MODIFICA UTENTE</h1>
     </div>
     <form action="../engine/server/addFly.php" method="POST" class="border border-white p-10">
         <div class="relative z-0 w-full mb-6 group">

@@ -7,3 +7,4 @@
     $page = $pageManager -> getPage($page);
     $pageManager -> sendPage($page);
 ?>
+  

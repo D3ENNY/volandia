@@ -6,8 +6,8 @@
         'number' => isset($_POST['number']) ? $_POST['number'] : "",
         'origin' => isset($_POST['origin']) ? ucfirst($_POST['origin']) : "",
         'destination' => isset($_POST['destination']) ? ucfirst($_POST['destination']) : "",
-        'departureDate' => isset($_POST['departureDate']) ? $_POST['departureDate'] : "",
-        'arrivalDate' => isset($_POST['arrivalDate']) ? $_POST['arrivalDate'] : "",
+        'departureDate' => isset($_POST['departureDate']) ? date('Y-m-d H:i:s', strtotime($_POST['departureDate'])) : "",
+        'arrivalDate' => isset($_POST['arrivalDate']) ? date('Y-m-d H:i:s', strtotime($_POST['arrivalDate'])) : "",
         'capacity' => isset($_POST['capacity']) ? $_POST['capacity'] : "",
         'codeIATA' => isset($_POST['codeIATA']) ? $_POST['codeIATA'] : "",
     );
