@@ -11,11 +11,11 @@
     <script src="https://unpkg.com/feather-icons"></script>
     <script src="https://unpkg.com/validator@latest/validator.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js"></script>
-    <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.full.min.js"></script>
     <!-- JS -->
     <script src="../engine/client/script.js"></script>
     <!-- CSS -->
-    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.0/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.min.css" />
     <link rel="stylesheet" href="../assets/style/style.css">
     
     <title>Admin Panel</title>

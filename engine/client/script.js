@@ -1,6 +1,5 @@
 $(()=>{
     const path = window.location.origin + "/progetti/volandia"
-    console.log(path);
 
     $('#user').attr('src', path+'/assets/img/icon.jpg');
 
@@ -33,15 +32,6 @@ $(()=>{
     $('#hamburger').click(()=>{ 
         $('#adminNav').toggleClass('hidden')
     })
-
-    $("#addFly").click(function (e) { 
-        e.preventDefault();
-        $.post(path+"/assets/components/admin/main.php",{
-            request: "addFly"
-        }, function (response) {
-            console.log("debug")
-        });
-    });
 
     //--------------------------//
 
