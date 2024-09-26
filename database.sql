@@ -6,7 +6,7 @@ USE volandia;
 CREATE TABLE USERS (
   username VARCHAR(255) PRIMARY KEY,
   email VARCHAR(45) NOT NULL,
-  password VARCHAR(60) NOT NULL
+  password CHAR(60) NOT NULL
 );
 
 CREATE TABLE PASSEGGERI (
@@ -31,7 +31,7 @@ CREATE TABLE PERSONALE (
   Ruolo VARCHAR(30), 
   Qualifica VARCHAR(30),
   email VARCHAR(45) NOT NULL, 
-  password VARCHAR(60) NOT NULL
+  password CHAR(60) NOT NULL
 ) ;
 
 /*      GESTIONE VOLI     */
